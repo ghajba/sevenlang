@@ -23,3 +23,13 @@ end
 
 
 if arg[1] ~= nil then prime_ends_in_3(arg[1]) end
+
+function for_loop(a, b, f)
+  i = a
+  while i <= b do
+    f(i)
+    i = i+1
+  end
+end
+
+for_loop(1,4,print)
