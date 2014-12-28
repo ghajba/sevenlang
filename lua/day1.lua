@@ -38,6 +38,10 @@ function add(previous, next)
   return previous+next
 end
 
+function multiply(previous, next)
+  return previous * next
+end
+
 function reduce(max, init, f)
   local result = init
   for i = 1, max do
@@ -46,4 +50,4 @@ function reduce(max, init, f)
   return result
 end
 
-print(reduce(5,0,add))
+print(reduce(5,1,multiply))
