@@ -11,3 +11,10 @@ function is_prime(n)
   end
   return true
 end
+
+counter = 0
+i = 3
+while counter < tonumber(arg[1]) do
+if ends_in_3(i) and is_prime(i) then counter = counter+1 print(i) end
+i = i+1
+end
