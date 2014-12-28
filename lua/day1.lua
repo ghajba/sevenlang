@@ -25,7 +25,7 @@ end
 if arg[1] ~= nil then prime_ends_in_3(arg[1]) end
 
 function for_loop(a, b, f)
-  i = a
+  local i = a
   while i <= b do
     f(i)
     i = i+1
@@ -33,3 +33,17 @@ function for_loop(a, b, f)
 end
 
 for_loop(1,4,print)
+
+function add(previous, next)
+  return previous+next
+end
+
+function reduce(max, init, f)
+  local result = init
+  for i = 1, max do
+    result = f(result, i)
+  end
+  return result
+end
+
+print(reduce(5,0,add))
