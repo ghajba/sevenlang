@@ -12,9 +12,14 @@ function is_prime(n)
   return true
 end
 
-counter = 0
-i = 3
-while counter < tonumber(arg[1]) do
-if ends_in_3(i) and is_prime(i) then counter = counter+1 print(i) end
-i = i+1
+function prime_ends_in_3(n)
+  counter = 0
+  i = 3
+  while counter < tonumber(n) do
+    if ends_in_3(i) and is_prime(i) then counter = counter+1 print(i) end
+    i = i+1
+  end
 end
+
+
+if arg[1] ~= nil then prime_ends_in_3(arg[1]) end
